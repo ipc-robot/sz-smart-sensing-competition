@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="深圳市智能感知与自主系统设计竞赛——主办单位：深圳市仪器仪表学会；发起单位：深圳大学、中山大学、深圳技术大学。设柔性电子、具身智能机器人、开源鸿蒙/RISC-V三大赛题。">
+  <title>深圳市智能感知与自主系统设计竞赛</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body id="top">
+  <!-- Sticky Top Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+        </span>
+        <span class="brand-text">深圳市智能感知与自主系统设计竞赛</span>
+      </a>
+
+      <nav class="nav-links" aria-label="主导航">
+        <a href="#overview" class="nav-link">赛事概览</a>
+        <a href="#tracks" class="nav-link">三大赛题</a>
+        <a href="#awards" class="nav-link">奖项设置</a>
+        <a href="#schedule" class="nav-link">比赛安排</a>
+        <a href="#registration" class="nav-link">报名与咨询</a>
+        <a href="#org" class="nav-link">相关单位</a>
+      </nav>
+
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="展开导航菜单" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="6" x2="20" y2="6"/>
+          <line x1="4" y1="12" x2="20" y2="12"/>
+          <line x1="4" y1="18" x2="20" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-menu" id="mobile-menu" aria-label="移动端导航">
+    <a href="#overview" class="nav-link">赛事概览</a>
+    <a href="#tracks" class="nav-link">三大赛题</a>
+    <a href="#awards" class="nav-link">奖项设置</a>
+    <a href="#schedule" class="nav-link">比赛安排</a>
+    <a href="#registration" class="nav-link">报名与咨询</a>
+    <a href="#org" class="nav-link">相关单位</a>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div>
+          <div class="hero-badge">
+            <span class="hero-badge-dot" aria-hidden="true"></span>
+            <span>深圳市仪器仪表学会 · 主办</span>
+          </div>
+
+          <h1 class="hero-title">深圳市智能感知与自主系统设计竞赛</h1>
+          <p class="hero-slogan">让感知有形态，让智能有身体，让系统有根基</p>
+
+          <div class="hero-meta">
+            <span class="hero-meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+              面向高校本科生、研究生与青年科创团队
+            </span>
+            <span class="hero-meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 21h18"/>
+                <path d="M5 21V7l7-4 7 4v14"/>
+                <path d="M9 21v-6h6v6"/>
+              </svg>
+              发起单位：深圳大学 · 中山大学 · 深圳技术大学
+            </span>
+          </div>
+
+          <div class="track-chips">
+            <a href="#track-1" class="track-chip">
+              <span class="track-chip-num">01</span>
+              <span>柔性电子</span>
+            </a>
+            <a href="#track-2" class="track-chip">
+              <span class="track-chip-num">02</span>
+              <span>具身智能机器人</span>
+            </a>
+            <a href="#track-3" class="track-chip">
+              <span class="track-chip-num">03</span>
+              <span>开源鸿蒙 / RISC-V</span>
+            </a>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#tracks" class="btn btn-primary">
+              <span>探索三大赛题</span>
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14"/>
+                <path d="m12 5 7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#schedule" class="btn btn-ghost">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="18" height="18" x="3" y="4" rx="2"/>
+                <path d="M16 2v4"/>
+                <path d="M8 2v4"/>
+                <path d="M3 10h18"/>
+              </svg>
+              <span>查看比赛安排</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-poster-wrap">
+          <div class="poster-card">
+            <button type="button" class="poster-trigger" id="poster-open" aria-label="点击查看大图海报">
+              <img src="./assets/poster.jpg" alt="深圳市智能感知与自主系统设计竞赛官方海报" class="poster-img">
+              <span class="poster-zoom-hint">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="11" cy="11" r="8"/>
+                  <path d="m21 21-4.3-4.3"/>
+                  <path d="M11 8v6"/>
+                  <path d="M8 11h6"/>
+                </svg>
+                点击放大海报
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Status Strip -->
+    <section class="cta-strip" aria-label="赛事关键时间提示">
+      <div class="container cta-strip-inner">
+        <span class="cta-pill">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/>
+            <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>
+          </svg>
+          2026 赛事指南
+        </span>
+        <h2 class="cta-headline">深圳市智能感知与自主系统设计竞赛作品征集</h2>
+        <p class="cta-dates">报名截止：2026年12月10日 · 晋级名单：12月16日 · 决赛：12月26日</p>
+        <span class="countdown-badge" id="countdown-badge">距报名截止：计算中…</span>
+      </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="section">
+      <div class="container">
+        <div class="section-header reveal visible">
+          <span class="section-kicker">Competition Manifesto</span>
+          <h2 class="section-title">赛事概览</h2>
+          <p class="section-subtitle">智能感知与自主系统前沿方向 · 产学研协同创新平台</p>
+        </div>
+
+        <div class="card overview-card reveal visible">
+          <p class="overview-text">
+            感知，正在从坚硬的硅片走向柔软的世界；智能，正在从屏幕里的算法走进真实的物理空间。当一片薄膜就能读出心跳，当一台机器能够看懂环境并独自穿过走廊，当一颗开放指令集的芯片与一套开源系统共生共长，智能感知与自主系统的边界，正在被重新定义。深圳市智能感知与自主系统设计竞赛设三大赛题：柔性电子，让感知有形态——可弯曲、可贴合、可形变，把测量界面贴到人体与万物的表面；具身智能机器人，让智能有身体——在真实世界完成感知、定位、规划、控制的闭环；开源鸿蒙/RISC-V，让系统有根基——以开放指令集定义芯片，以开源系统为终端设备铸魂。现面向高校本科生、研究生及青年科创爱好者征集创新作品，诚邀同台交流、展示成果。
+          </p>
+        </div>
+
+        <div class="stats-grid reveal visible">
+          <div class="stat-tile card-hover">
+            <div class="stat-value">3 大前沿赛题</div>
+            <div class="stat-label">柔性电子 · 具身智能 · 开源鸿蒙/RISC-V</div>
+          </div>
+          <div class="stat-tile card-hover">
+            <div class="stat-value">18 个获奖席位</div>
+            <div class="stat-label">每赛题设一/二/三等奖共 6 名</div>
+          </div>
+          <div class="stat-tile card-hover">
+            <div class="stat-value">¥16,500 总奖金池</div>
+            <div class="stat-label">单赛题最高奖金 2000 元</div>
+          </div>
+          <div class="stat-tile card-hover">
+            <div class="stat-value">2026.12.26 决赛日</div>
+            <div class="stat-label">12月10日报名截止 · 12月16日公布晋级</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tracks Section -->
+    <section id="tracks" class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-kicker">Section 01</span>
+          <h2 class="section-title">一、赛题设置</h2>
+          <p class="section-subtitle">三大赛题独立评审、分别设奖，鼓励实物原型与工程落地验证</p>
+        </div>
+
+        <div class="tracks-grid">
+          <!-- Track 1 -->
+          <article id="track-1" class="card card-hover track-card reveal" data-theme="primary">
+            <div>
+              <div class="track-head">
+                <div class="track-head-main">
+                  <span class="icon-badge icon-primary" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M2 12c2.5-4 5.5-4 8 0s5.5 4 8 0 2.5-2 4-2"/>
+                      <path d="M2 18c2.5-4 5.5-4 8 0s5.5 4 8 0 2.5-2 4-2"/>
+                      <path d="M2 6c2.5-4 5.5-4 8 0s5.5 4 8 0 2.5-2 4-2"/>
+                    </svg>
+                  </span>
+                  <div>
+                    <h3 class="track-title">赛题1：柔性电子</h3>
+                    <p class="track-tagline">让感知有形态</p>
+                  </div>
+                </div>
+                <span class="track-num">Track 01</span>
+              </div>
+
+              <p class="track-desc">
+                柔性电子打破了传统刚性传感器的局限，让感知界面可弯曲、可贴合、可形变，是人体健康监测、人机交互、软体机器人、柔性仪器的核心技术。本赛题面向柔性材料、柔性传感器、柔性电路、可穿戴感知系统、柔性信号采集与校准系统等方向。参赛作品可包含柔性压力/应变/温度/电化学传感器、柔性电极、柔性阵列感知、柔性仪器前端、柔性人体监测设备等。
+              </p>
+
+              <div class="focus-callout">
+                <strong>考察重点：</strong>鼓励完成实物原型、信号采集与验证测试，重点考察传感原理、系统设计、信号调理、性能标定与工程落地潜力。
+              </div>
+            </div>
+
+            <div>
+              <h4 class="topic-heading">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 11l3 3L22 4"/>
+                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                </svg>
+                推荐选题方向
+              </h4>
+              <ul class="pill-list">
+                <li class="pill-row"><span class="pill-index">1</span><span>柔性薄膜应变/压力传感器及其信号采集系统</span></li>
+                <li class="pill-row"><span class="pill-index">2</span><span>可穿戴人体生理信号柔性监测装备</span></li>
+                <li class="pill-row"><span class="pill-index">3</span><span>柔性多参数传感阵列与数据融合系统</span></li>
+                <li class="pill-row"><span class="pill-index">4</span><span>软体机器人柔性触觉感知模块</span></li>
+                <li class="pill-row"><span class="pill-index">5</span><span>柔性电子仪器前端、柔性人机交互界面</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Track 2 -->
+          <article id="track-2" class="card card-hover track-card reveal" data-theme="accent">
+            <div>
+              <div class="track-head">
+                <div class="track-head-main">
+                  <span class="icon-badge icon-accent" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="16" height="12" x="4" y="8" rx="2"/>
+                      <path d="M12 8V4H8"/>
+                      <path d="M2 14h2"/>
+                      <path d="M20 14h2"/>
+                      <path d="M15 13v2"/>
+                      <path d="M9 13v2"/>
+                    </svg>
+                  </span>
+                  <div>
+                    <h3 class="track-title">赛题2：具身智能机器人</h3>
+                    <p class="track-tagline">让智能有身体</p>
+                  </div>
+                </div>
+                <span class="track-num">Track 02</span>
+              </div>
+
+              <p class="track-desc">
+                具身智能强调机器人通过物理实体进行环境感知与交互，在真实物理世界完成感知、定位、规划、控制闭环。本赛题聚焦机器人本体搭建、多传感器融合、环境感知、自主导航、目标识别、运动控制、人机交互等技术。参赛作品可以是移动机器人、机械臂、仿生机器人、小型自主机器人系统。
+              </p>
+
+              <div class="focus-callout">
+                <strong>考察重点：</strong>要求机器人具备环境感知能力，可完成自主任务，重点考察多传感器融合算法、自主决策逻辑、运动控制性能与系统集成能力。
+              </div>
+            </div>
+
+            <div>
+              <h4 class="topic-heading">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 11l3 3L22 4"/>
+                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                </svg>
+                推荐选题方向
+              </h4>
+              <ul class="pill-list">
+                <li class="pill-row"><span class="pill-index">1</span><span>基于视觉+激光雷达/IMU的多传感融合自主移动机器人</span></li>
+                <li class="pill-row"><span class="pill-index">2</span><span>机械臂目标识别、抓取与自主作业系统</span></li>
+                <li class="pill-row"><span class="pill-index">3</span><span>小型仿生机器人环境感知与自主避障</span></li>
+                <li class="pill-row"><span class="pill-index">4</span><span>机器人端侧感知推理、轻量化具身智能算法</span></li>
+                <li class="pill-row"><span class="pill-index">5</span><span>机器人状态监测与故障感知系统</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Track 3 -->
+          <article id="track-3" class="card card-hover track-card reveal" data-theme="violet">
+            <div>
+              <div class="track-head">
+                <div class="track-head-main">
+                  <span class="icon-badge icon-violet" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="5" y="5" rx="2"/>
+                      <rect width="6" height="6" x="9" y="9" rx="1"/>
+                      <path d="M15 2v3"/>
+                      <path d="M15 19v3"/>
+                      <path d="M2 15h3"/>
+                      <path d="M2 9h3"/>
+                      <path d="M19 15h3"/>
+                      <path d="M19 9h3"/>
+                      <path d="M9 2v3"/>
+                      <path d="M9 19v3"/>
+                    </svg>
+                  </span>
+                  <div>
+                    <h3 class="track-title">赛题3：开源鸿蒙/RISC-V</h3>
+                    <p class="track-tagline">让系统有根基</p>
+                  </div>
+                </div>
+                <span class="track-num">Track 03</span>
+              </div>
+
+              <p class="track-desc">
+                RISC-V以开放、模块化的指令集，打破了芯片架构受制于单一商业授权的格局；开源鸿蒙以可伸缩内核与分布式软总线，适配从KB级轻量模组到多核应用处理器的多种设备。二者结合，使芯片可自主定义，系统可按需裁剪，应用可一次开发、多端部署。本赛题面向RISC-V芯片板级支持包与驱动移植、开源鸿蒙轻量与标准系统适配、端侧AI推理部署、分布式多设备协同等方向。参赛作品可以是基于RISC-V芯片的开源鸿蒙感知节点、端侧轻量模型推理设备、分布式多机协同测量系统等。
+              </p>
+
+              <div class="focus-callout">
+                <strong>考察重点：</strong>鼓励完成实物原型、系统级联通与性能功耗实测，重点考察架构适配能力、驱动与系统集成质量、软硬协同优化水平。
+              </div>
+            </div>
+
+            <div>
+              <h4 class="topic-heading">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 11l3 3L22 4"/>
+                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                </svg>
+                推荐选题方向
+              </h4>
+              <ul class="pill-list">
+                <li class="pill-row"><span class="pill-index">1</span><span>基于RISC-V芯片的开源鸿蒙感知节点与工业网关</span></li>
+                <li class="pill-row"><span class="pill-index">2</span><span>轻量神经网络的端侧推理、量化压缩与部署验证</span></li>
+                <li class="pill-row"><span class="pill-index">3</span><span>分布式软总线驱动的多设备协同测量与人机交互系统</span></li>
+                <li class="pill-row"><span class="pill-index">4</span><span>RISC-V平台板级支持包移植、驱动开发与系统裁剪优化</span></li>
+                <li class="pill-row"><span class="pill-index">5</span><span>自主可控仪器前端与智能传感终端的一体化设计</span></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-kicker">Section 02</span>
+          <h2 class="section-title">二、奖项设置</h2>
+          <p class="section-subtitle">三大赛题独立评奖，激励原创硬件与系统设计</p>
+        </div>
+
+        <div class="awards-grid">
+          <div class="card card-hover award-card reveal">
+            <div class="award-top">
+              <div class="award-title-wrap">
+                <span class="icon-badge icon-secondary" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                    <path d="M4 22h16"/>
+                    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+                    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+                    <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+                  </svg>
+                </span>
+                <div>
+                  <h3 class="award-rank">一等奖</h3>
+                  <p class="award-quota">每赛题 1 名</p>
+                </div>
+              </div>
+              <span class="stage-pill">共 3 名</span>
+            </div>
+            <div class="award-prize">2000<span>元 / 队</span></div>
+            <div class="award-foot">
+              <span>覆盖柔性电子、具身智能、开源鸿蒙/RISC-V</span>
+              <strong>小计 6000 元</strong>
+            </div>
+          </div>
+
+          <div class="card card-hover award-card award-second reveal">
+            <div class="award-top">
+              <div class="award-title-wrap">
+                <span class="icon-badge icon-primary" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="8" r="6"/>
+                    <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
+                  </svg>
+                </span>
+                <div>
+                  <h3 class="award-rank">二等奖</h3>
+                  <p class="award-quota">每赛题 2 名</p>
+                </div>
+              </div>
+              <span class="stage-pill">共 6 名</span>
+            </div>
+            <div class="award-prize">1000<span>元 / 队</span></div>
+            <div class="award-foot">
+              <span>覆盖柔性电子、具身智能、开源鸿蒙/RISC-V</span>
+              <strong>小计 6000 元</strong>
+            </div>
+          </div>
+
+          <div class="card card-hover award-card award-third reveal">
+            <div class="award-top">
+              <div class="award-title-wrap">
+                <span class="icon-badge icon-accent" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 15l-3.5 2 .67-3.9L6.34 10.3l3.92-.57L12 6.2l1.74 3.53 3.92.57-2.83 2.8.67 3.9z"/>
+                    <circle cx="12" cy="12" r="10"/>
+                  </svg>
+                </span>
+                <div>
+                  <h3 class="award-rank">三等奖</h3>
+                  <p class="award-quota">每赛题 3 名</p>
+                </div>
+              </div>
+              <span class="stage-pill">共 9 名</span>
+            </div>
+            <div class="award-prize">500<span>元 / 队</span></div>
+            <div class="award-foot">
+              <span>覆盖柔性电子、具身智能、开源鸿蒙/RISC-V</span>
+              <strong>小计 4500 元</strong>
+            </div>
+          </div>
+        </div>
+
+        <p class="award-rule-note reveal">
+          各赛题分别设置一等奖1名、二等奖2名、三等奖3名，奖金分别为2000元、1000元、500元。
+        </p>
+      </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-kicker">Section 04</span>
+          <h2 class="section-title">四、比赛安排</h2>
+          <p class="section-subtitle">2026年12月三大关键赛事节点</p>
+        </div>
+
+        <div class="timeline-grid">
+          <article class="card card-hover timeline-card reveal" data-date="2026-12-10">
+            <div class="timeline-top">
+              <span class="timeline-step">STAGE 01</span>
+              <span class="stage-pill" data-stage-label>待开始</span>
+            </div>
+            <div class="timeline-date">2026年12月10日</div>
+            <h3 class="timeline-title">报名截止</h3>
+            <p class="timeline-desc">请参赛团队于报名截止日期前完成作品选题与参赛报名信息提交。</p>
+          </article>
+
+          <article class="card card-hover timeline-card reveal" data-date="2026-12-16">
+            <div class="timeline-top">
+              <span class="timeline-step">STAGE 02</span>
+              <span class="stage-pill" data-stage-label>待开始</span>
+            </div>
+            <div class="timeline-date">2026年12月16日</div>
+            <h3 class="timeline-title">晋级名单</h3>
+            <p class="timeline-desc">评审委员会完成初审遴选并公布晋级决赛团队名单。</p>
+          </article>
+
+          <article class="card card-hover timeline-card reveal" data-date="2026-12-26">
+            <div class="timeline-top">
+              <span class="timeline-step">STAGE 03</span>
+              <span class="stage-pill" data-stage-label>待开始</span>
+            </div>
+            <div class="timeline-date">2026年12月26日</div>
+            <h3 class="timeline-title">决赛时间</h3>
+            <p class="timeline-desc">晋级团队同台展示作品原型、系统演示与现场答辩评审。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registration & Consultation Section -->
+    <section id="registration" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-kicker">Section 03 &amp; 05</span>
+          <h2 class="section-title">报名方式与赛题咨询</h2>
+          <p class="section-subtitle">报名入口与官方答疑渠道将在此同步更新</p>
+        </div>
+
+        <div class="two-col-grid">
+          <!-- 三、报名方式 -->
+          <article class="card card-hover reveal">
+            <div class="card-header">
+              <div class="card-header-left">
+                <span class="icon-badge icon-primary" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 20h9"/>
+                    <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/>
+                  </svg>
+                </span>
+                <h3 class="card-title">三、报名方式</h3>
+              </div>
+              <span class="status-badge-pending">即将公布</span>
+            </div>
+
+            <!-- 组委会更新提示：在此处填入报名链接、投稿邮箱或报名表下载链接 -->
+            <div class="pending-box">
+              报名通道及材料提交细则即将由主办单位正式发布，敬请关注。请在 <strong>2026年12月10日</strong> 报名截止前留意最新通知。
+            </div>
+
+            <ul class="pill-list">
+              <li class="pill-row">
+                <span class="pill-index">1</span>
+                <span>参赛对象：高校本科生、研究生及青年科创爱好者</span>
+              </li>
+              <li class="pill-row">
+                <span class="pill-index">2</span>
+                <span>可选赛题：柔性电子 / 具身智能机器人 / 开源鸿蒙与RISC-V</span>
+              </li>
+              <li class="pill-row">
+                <span class="pill-index">3</span>
+                <span>报名通道 / 投稿邮箱：待组委会补充更新</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- 五、赛题咨询 -->
+          <article class="card card-hover reveal">
+            <div class="card-header">
+              <div class="card-header-left">
+                <span class="icon-badge icon-secondary" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                  </svg>
+                </span>
+                <h3 class="card-title">五、赛题咨询</h3>
+              </div>
+              <span class="status-badge-pending">待更新</span>
+            </div>
+
+            <!-- 组委会更新提示：在此处填入联系人、邮箱、电话，或将二维码放入 assets/group-qr.png 与 assets/wechat-qr.png -->
+            <div class="pending-box">
+              赛题答疑群、技术咨询联系人及官方通知渠道正在同步完善中，更新后将在此处提供二维码与联系方式。
+            </div>
+
+            <div class="qr-placeholder-grid">
+              <div class="qr-slot">
+                <div class="qr-box" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="5" height="5" x="3" y="3" rx="1"/>
+                    <rect width="5" height="5" x="16" y="3" rx="1"/>
+                    <rect width="5" height="5" x="3" y="16" rx="1"/>
+                    <path d="M21 16h-3a2 2 0 0 0-2 2v3"/>
+                    <path d="M21 21v.01"/>
+                    <path d="M12 7v3a2 2 0 0 1-2 2H7"/>
+                    <path d="M3 12h.01"/>
+                    <path d="M12 3h.01"/>
+                    <path d="M12 16v.01"/>
+                    <path d="M16 12h1"/>
+                    <path d="M21 12v.01"/>
+                    <path d="M12 21v-1"/>
+                  </svg>
+                </div>
+                <p class="qr-label">参赛交流群</p>
+                <p class="qr-sub">二维码待更新</p>
+              </div>
+              <div class="qr-slot">
+                <div class="qr-box" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <path d="m22 6-10 7L2 6"/>
+                  </svg>
+                </div>
+                <p class="qr-label">咨询邮箱 / 电话</p>
+                <p class="qr-sub">联系方式待更新</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Organizations Section -->
+    <section id="org" class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-kicker">Organizations</span>
+          <h2 class="section-title">相关单位</h2>
+          <p class="section-subtitle">主办单位与发起单位</p>
+        </div>
+
+        <div class="two-col-grid">
+          <article class="card card-hover org-card reveal">
+            <div class="card-header">
+              <div class="card-header-left">
+                <span class="icon-badge icon-primary" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
+                    <line x1="4" x2="4" y1="22" y2="15"/>
+                  </svg>
+                </span>
+                <h3 class="card-title">主办单位</h3>
+              </div>
+            </div>
+            <ul class="org-list">
+              <li><span class="org-pill">深圳市仪器仪表学会</span></li>
+            </ul>
+            <p class="org-note">统筹赛事组织、赛题指南发布、作品评审与成果交流展示。</p>
+          </article>
+
+          <article class="card card-hover org-card org-initiators reveal">
+            <div class="card-header">
+              <div class="card-header-left">
+                <span class="icon-badge icon-secondary" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                  </svg>
+                </span>
+                <h3 class="card-title">发起单位</h3>
+              </div>
+            </div>
+            <ul class="org-list">
+              <li>
+                <a href="https://www.szu.edu.cn/" target="_blank" rel="noopener noreferrer" class="org-pill">深圳大学</a>
+              </li>
+              <li>
+                <a href="https://www.sysu.edu.cn/" target="_blank" rel="noopener noreferrer" class="org-pill">中山大学</a>
+              </li>
+              <li>
+                <a href="https://www.sztu.edu.cn/" target="_blank" rel="noopener noreferrer" class="org-pill">深圳技术大学</a>
+              </li>
+            </ul>
+            <p class="org-note">联合发起赛题设计与学术指导，推动高校青年科创力量协同攻关。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-title">深圳市智能感知与自主系统设计竞赛</div>
+        <p class="footer-slogan">让感知有形态，让智能有身体，让系统有根基</p>
+        <p class="footer-meta">主办单位：深圳市仪器仪表学会 · 发起单位：深圳大学、中山大学、深圳技术大学</p>
+      </div>
+      <a href="#top" class="back-to-top">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m18 15-6-6-6 6"/>
+        </svg>
+        <span>返回顶部</span>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Poster Lightbox Modal -->
+  <div class="modal" id="poster-modal" role="dialog" aria-modal="true" aria-label="竞赛官方海报大图">
+    <div class="modal-content">
+      <button type="button" class="modal-close" id="poster-close" aria-label="关闭海报预览">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+          <path d="M18 6 6 18"/>
+          <path d="m6 6 12 12"/>
+        </svg>
+      </button>
+      <img src="./assets/poster.jpg" alt="深圳市智能感知与自主系统设计竞赛官方海报大图" class="modal-img">
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

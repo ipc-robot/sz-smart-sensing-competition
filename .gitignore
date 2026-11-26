@@ -3,3 +3,8 @@ Thumbs.db
 .vscode/
 .idea/
 *.log
+server/.env
+data/
+*.db
+*.db-wal
+*.db-shm

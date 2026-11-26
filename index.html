@@ -26,7 +26,7 @@
         <a href="#tracks" class="nav-link">三大赛题</a>
         <a href="#awards" class="nav-link">奖项设置</a>
         <a href="#schedule" class="nav-link">比赛安排</a>
-        <a href="#registration" class="nav-link">报名与咨询</a>
+        <a href="#registration" class="nav-link">在线报名与提交</a>
         <a href="#org" class="nav-link">相关单位</a>
       </nav>
 
@@ -45,7 +45,7 @@
     <a href="#tracks" class="nav-link">三大赛题</a>
     <a href="#awards" class="nav-link">奖项设置</a>
     <a href="#schedule" class="nav-link">比赛安排</a>
-    <a href="#registration" class="nav-link">报名与咨询</a>
+    <a href="#registration" class="nav-link">在线报名与提交</a>
     <a href="#org" class="nav-link">相关单位</a>
   </nav>
 
@@ -99,12 +99,15 @@
           </div>
 
           <div class="hero-actions">
-            <a href="#tracks" class="btn btn-primary">
-              <span>探索三大赛题</span>
+            <a href="#registration" class="btn btn-primary">
+              <span>在线报名与提交</span>
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M5 12h14"/>
                 <path d="m12 5 7 7-7 7"/>
               </svg>
+            </a>
+            <a href="#tracks" class="btn btn-ghost">
+              <span>探索三大赛题</span>
             </a>
             <a href="#schedule" class="btn btn-ghost">
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -491,13 +494,13 @@
       <div class="container">
         <div class="section-header reveal">
           <span class="section-kicker">Section 03 &amp; 05</span>
-          <h2 class="section-title">报名方式与赛题咨询</h2>
-          <p class="section-subtitle">报名入口与官方答疑渠道将在此同步更新</p>
+          <h2 class="section-title">在线报名与作品提交</h2>
+          <p class="section-subtitle">请于 2026年12月10日 前在线填写队伍信息并上传技术文档（作品视频可选）</p>
         </div>
 
-        <div class="two-col-grid">
-          <!-- 三、报名方式 -->
-          <article class="card card-hover reveal">
+        <div class="registration-stack">
+          <!-- 三、报名与作品提交 -->
+          <article class="card registration-card reveal">
             <div class="card-header">
               <div class="card-header-left">
                 <span class="icon-badge icon-primary" aria-hidden="true">
@@ -506,30 +509,211 @@
                     <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/>
                   </svg>
                 </span>
-                <h3 class="card-title">三、报名方式</h3>
+                <div>
+                  <h3 class="card-title">三、报名方式与作品上传</h3>
+                  <p class="card-sub">提交报名信息 + 必传技术文档（≤ 50MB）+ 可选作品介绍视频（≤ 200MB 或外链）</p>
+                </div>
               </div>
-              <span class="status-badge-pending">即将公布</span>
+              <span class="status-badge-live" id="upload-status-badge">在线提交通道</span>
             </div>
 
-            <!-- 组委会更新提示：在此处填入报名链接、投稿邮箱或报名表下载链接 -->
-            <div class="pending-box">
-              报名通道及材料提交细则即将由主办单位正式发布，敬请关注。请在 <strong>2026年12月10日</strong> 报名截止前留意最新通知。
+            <!-- Inline Submission Form (Active on FRP/HTTP or when HTTPS API is configured) -->
+            <div id="submission-form-wrap">
+              <form id="submission-form" novalidate>
+                <div class="form-grid">
+                  <div class="form-field">
+                    <label for="f-track" class="form-label">参赛赛题 <span class="req">*</span></label>
+                    <select id="f-track" name="track" class="form-control" required>
+                      <option value="">请选择参赛赛题</option>
+                      <option value="柔性电子">赛题1：柔性电子</option>
+                      <option value="具身智能机器人">赛题2：具身智能机器人</option>
+                      <option value="开源鸿蒙/RISC-V">赛题3：开源鸿蒙/RISC-V</option>
+                    </select>
+                  </div>
+
+                  <div class="form-field">
+                    <label for="f-team" class="form-label">队伍名称 <span class="req">*</span></label>
+                    <input type="text" id="f-team" name="teamName" class="form-control" maxlength="80" placeholder="例如：深大智感先锋队" required>
+                  </div>
+
+                  <div class="form-field form-field-full">
+                    <label for="f-title" class="form-label">作品名称 <span class="req">*</span></label>
+                    <input type="text" id="f-title" name="projectTitle" class="form-control" maxlength="120" placeholder="请输入参赛作品完整题目" required>
+                  </div>
+
+                  <div class="form-field">
+                    <label for="f-leader" class="form-label">队长姓名 <span class="req">*</span></label>
+                    <input type="text" id="f-leader" name="leaderName" class="form-control" maxlength="50" placeholder="负责人姓名" required>
+                  </div>
+
+                  <div class="form-field">
+                    <label for="f-school" class="form-label">学校 / 单位 <span class="req">*</span></label>
+                    <input type="text" id="f-school" name="school" class="form-control" maxlength="100" placeholder="例如：深圳大学 / 中山大学" required>
+                  </div>
+
+                  <div class="form-field">
+                    <label for="f-phone" class="form-label">联系电话 <span class="req">*</span></label>
+                    <input type="tel" id="f-phone" name="phone" class="form-control" maxlength="30" placeholder="常用手机号" required>
+                  </div>
+
+                  <div class="form-field">
+                    <label for="f-email" class="form-label">联系邮箱 <span class="req">*</span></label>
+                    <input type="email" id="f-email" name="email" class="form-control" maxlength="100" placeholder="用于接收晋级通知与回执" required>
+                  </div>
+
+                  <div class="form-field">
+                    <label for="f-members" class="form-label">其他队员姓名（选填）</label>
+                    <input type="text" id="f-members" name="members" class="form-control" maxlength="200" placeholder="多位队员请用顿号或逗号分隔">
+                  </div>
+
+                  <div class="form-field">
+                    <label for="f-advisor" class="form-label">指导老师（选填）</label>
+                    <input type="text" id="f-advisor" name="advisor" class="form-control" maxlength="100" placeholder="如无指导老师可留空">
+                  </div>
+
+                  <div class="form-field form-field-full">
+                    <div class="label-row">
+                      <label for="f-summary" class="form-label">作品简介 <span class="req">*</span></label>
+                      <span class="char-counter" id="summary-count">0 / 500 字（至少 20 字）</span>
+                    </div>
+                    <textarea id="f-summary" name="summary" class="form-control form-textarea" rows="4" maxlength="500" placeholder="简要阐述作品背景、核心技术方案、创新点与实物验证情况（20–500字）" required></textarea>
+                  </div>
+
+                  <!-- Technical Document Upload (Required) -->
+                  <div class="form-field form-field-full">
+                    <label for="doc-input" class="form-label">技术文档（必传）<span class="req">*</span></label>
+                    <div class="dropzone" id="doc-dropzone" tabindex="0" role="button" aria-label="选择或拖拽上传技术文档">
+                      <input type="file" id="doc-input" accept=".pdf,.doc,.docx" class="dropzone-input">
+                      <div class="dropzone-body">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                          <polyline points="14 2 14 8 20 8"/>
+                          <path d="M12 18v-6"/>
+                          <path d="m9 15 3-3 3 3"/>
+                        </svg>
+                        <div>
+                          <div class="dropzone-title">点击选择或拖拽技术文档至此</div>
+                          <div class="dropzone-hint">支持 PDF / DOC / DOCX 格式，文件大小不超过 50 MB</div>
+                        </div>
+                      </div>
+                      <div class="dropzone-file hidden" id="doc-file-info"></div>
+                    </div>
+                  </div>
+
+                  <!-- Optional Intro Video -->
+                  <div class="form-field form-field-full">
+                    <div class="label-row">
+                      <span class="form-label">作品介绍视频（可选项）</span>
+                      <span class="hint-text">支持直接上传视频或填写 B站/网盘链接</span>
+                    </div>
+                    <div class="segmented-tabs" role="tablist" aria-label="视频提交方式">
+                      <button type="button" class="segmented-tab active" data-video-mode="none">暂不提交视频</button>
+                      <button type="button" class="segmented-tab" data-video-mode="upload">直接上传视频（≤ 200MB）</button>
+                      <button type="button" class="segmented-tab" data-video-mode="link">填写视频链接</button>
+                    </div>
+
+                    <div id="video-upload-panel" class="video-panel hidden">
+                      <div class="dropzone" id="video-dropzone" tabindex="0" role="button" aria-label="选择或拖拽上传作品介绍视频">
+                        <input type="file" id="video-input" accept=".mp4,.mov,.webm,.mkv,video/mp4,video/quicktime,video/webm" class="dropzone-input">
+                        <div class="dropzone-body">
+                          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <polygon points="23 7 16 12 23 17 23 7"/>
+                            <rect width="15" height="14" x="1" y="5" rx="2" ry="2"/>
+                          </svg>
+                          <div>
+                            <div class="dropzone-title">点击选择或拖拽视频文件至此</div>
+                            <div class="dropzone-hint">支持 MP4 / MOV / WebM / MKV 格式，最大 200 MB</div>
+                          </div>
+                        </div>
+                        <div class="dropzone-file hidden" id="video-file-info"></div>
+                      </div>
+                    </div>
+
+                    <div id="video-link-panel" class="video-panel hidden">
+                      <div class="form-grid">
+                        <div class="form-field">
+                          <label for="f-video-url" class="form-label">视频 / 网盘链接</label>
+                          <input type="url" id="f-video-url" name="videoUrl" class="form-control" maxlength="300" placeholder="https://www.bilibili.com/... 或网盘分享链接">
+                        </div>
+                        <div class="form-field">
+                          <label for="f-video-note" class="form-label">提取码 / 说明（选填）</label>
+                          <input type="text" id="f-video-note" name="videoNote" class="form-control" maxlength="120" placeholder="例如：提取码 abcd，视频时长 3 分钟">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="alert-error hidden" id="form-error" role="alert"></div>
+
+                <div class="progress-wrap hidden" id="upload-progress">
+                  <div class="progress-meta">
+                    <span id="progress-label">正在准备上传…</span>
+                    <span id="progress-pct">0%</span>
+                  </div>
+                  <div class="progress-track">
+                    <div class="progress-fill" id="progress-bar"></div>
+                  </div>
+                </div>
+
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary" id="submit-btn">
+                    <span>确认提交报名与作品</span>
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M5 12h14"/>
+                      <path d="m12 5 7 7-7 7"/>
+                    </svg>
+                  </button>
+                  <span class="form-tip">提交后将立即生成唯一报名回执编号，请妥善保存。</span>
+                </div>
+              </form>
+
+              <!-- Receipt Card -->
+              <div class="receipt-card hidden" id="submit-receipt">
+                <div class="receipt-head">
+                  <span class="icon-badge icon-accent" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                  </span>
+                  <div>
+                    <h4 class="receipt-title">报名与作品材料已成功提交</h4>
+                    <p class="receipt-sub">您的技术文档及参赛信息已安全写入组委会接收服务器。</p>
+                  </div>
+                </div>
+                <div class="receipt-id-bar">
+                  <span>报名回执编号：<strong id="receipt-id-text"></strong></span>
+                  <button type="button" class="btn-copy" id="copy-receipt-id">复制编号</button>
+                </div>
+                <dl class="receipt-details" id="receipt-details"></dl>
+                <div class="receipt-actions">
+                  <button type="button" class="btn btn-outline-dark" id="reset-form-btn">继续提交另一支队伍</button>
+                </div>
+              </div>
             </div>
 
-            <ul class="pill-list">
-              <li class="pill-row">
-                <span class="pill-index">1</span>
-                <span>参赛对象：高校本科生、研究生及青年科创爱好者</span>
-              </li>
-              <li class="pill-row">
-                <span class="pill-index">2</span>
-                <span>可选赛题：柔性电子 / 具身智能机器人 / 开源鸿蒙与RISC-V</span>
-              </li>
-              <li class="pill-row">
-                <span class="pill-index">3</span>
-                <span>报名通道 / 投稿邮箱：待组委会补充更新</span>
-              </li>
-            </ul>
+            <!-- HTTPS Portal Redirect Card (Shown on GitHub Pages HTTPS when no HTTPS API proxy is configured) -->
+            <div id="github-pages-redirect" class="portal-redirect-box hidden">
+              <div class="portal-redirect-info">
+                <h4 class="portal-redirect-title">前往赛事统一接收平台完成报名与材料上传</h4>
+                <p class="portal-redirect-desc">
+                  当前页面托管于 GitHub Pages 静态站点；为保障大体积技术文档与作品视频稳定直传至组委会服务器，请点击下方按钮进入在线报名与上传入口：
+                </p>
+                <ul class="pill-list" style="margin-bottom:1.15rem;">
+                  <li class="pill-row"><span class="pill-index">1</span><span>在线填写队伍信息：赛题、队名、作品名称、队长与成员、联系方式、简介</span></li>
+                  <li class="pill-row"><span class="pill-index">2</span><span>必传技术文档：支持 PDF / DOC / DOCX，最大 50 MB</span></li>
+                  <li class="pill-row"><span class="pill-index">3</span><span>可选作品视频：支持 MP4 / MOV / WebM / MKV 直传（≤ 200 MB）或填写 B站/网盘链接</span></li>
+                </ul>
+                <a id="portal-jump-link" href="http://106.53.200.120:38000/apps/sz-competition/#registration" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                  <span>进入报名与作品上传入口</span>
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                    <polyline points="15 3 21 3 21 9"/>
+                    <line x1="10" x2="21" y1="14" y2="3"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
           </article>
 
           <!-- 五、赛题咨询 -->
